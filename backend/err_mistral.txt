@@ -1,0 +1,46 @@
+Traceback (most recent call last):
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\utils\__init__.py", line 183, in __getattr__
+    module = dynamic_import(module_name)
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\utils\__init__.py", line 166, in dynamic_import
+    return import_module(modname, __package__)
+  File "C:\Program Files\Python314\Lib\importlib\__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1398, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\utils\url.py", line 21, in <module>
+    from .values import (
+    ...<4 lines>...
+    )
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\utils\values.py", line 14, in <module>
+    from ..types.basemodel import Unset
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\types\__init__.py", line 3, in <module>
+    from .basemodel import (
+    ...<7 lines>...
+    )
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\types\basemodel.py", line 3, in <module>
+    from pydantic import ConfigDict, model_serializer
+ImportError: cannot import name 'model_serializer' from 'pydantic' (C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\pydantic\__init__.cp314-win_amd64.pyd)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\harshithatl\ai-return-analytics\backend\test_mistral.py", line 4, in <module>
+    from mistralai import Mistral
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\__init__.py", line 10, in <module>
+    from .sdk import *
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\sdk.py", line 3, in <module>
+    from .basesdk import BaseSDK
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\basesdk.py", line 3, in <module>
+    from .sdkconfiguration import SDKConfiguration
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\sdkconfiguration.py", line 10, in <module>
+    from .utils import Logger, RetryConfig, remove_suffix
+  File "C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\mistralai\utils\__init__.py", line 186, in __getattr__
+    raise ImportError(
+        f"Failed to import {attr_name} from {module_name}: {e}"
+    ) from e
+ImportError: Failed to import remove_suffix from .url: cannot import name 'model_serializer' from 'pydantic' (C:\Users\harshithatl\ai-return-analytics\backend\venv\Lib\site-packages\pydantic\__init__.cp314-win_amd64.pyd)
