@@ -321,15 +321,6 @@ function App() {
                         Synthesizing eCommerce dataset intelligence for strategic retail intervention and revenue recovery.
                       </Typography>
                     </Box>
-                    <Box sx={{ display: 'flex', gap: 2 }}>
-                      <Button
-                        variant="outlined"
-                        onClick={handleExport}
-                        sx={{ borderRadius: '10px', borderColor: 'rgba(255,255,255,0.1)', color: '#fff', textTransform: 'none' }}
-                      >
-                        Export Report
-                      </Button>
-                    </Box>
                   </Box>
 
                   {/* KPI Row */}
@@ -857,14 +848,6 @@ function App() {
                             </Box>
                           </Card>
 
-                          <Button
-                            variant="contained"
-                            className="glow-button"
-                            sx={{ py: 2, fontSize: '1.1rem', borderRadius: '16px', height: '80px' }}
-                            onClick={handleExport}
-                          >
-                            Download Financial Forecast Report
-                          </Button>
                         </Box>
                       </Grid>
                     </Grid>
